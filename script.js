@@ -1,69 +1,75 @@
-// ===============================
-// Part 1: Variable declarations and conditionals
-// ===============================
+// ====================
+// Part 1: Variables & Conditionals
+// ====================
 
-let perfumeName = "Amber Rose";
-let stock = 5;
-let isAvailable = stock > 0; // boolean
+// Example customer preference
+let perfumeSize = "large"; // can be "small", "medium", or "large"
+let price;
 
-if (isAvailable) {
-  console.log(perfumeName + " is in stock.");
+if (perfumeSize === "small") {
+  price = 50;
+} else if (perfumeSize === "medium") {
+  price = 90;
 } else {
-  console.log(perfumeName + " is sold out.");
+  price = 150;
+}
+console.log("Selected size: " + perfumeSize + " | Price: $" + price);
+
+
+// ====================
+// Part 2: Custom Functions
+// ====================
+
+// Function 1: Calculate Discount
+function applyDiscount(price, discountPercent) {
+  let discountAmount = (price * discountPercent) / 100;
+  return price - discountAmount;
 }
 
-// ===============================
-// Part 2: Custom functions
-// ===============================
-
-// Function 1: Greet user
-function greetUser(name) {
-  return "Hello " + name + ", welcome to Gracey Oil Perfume!";
+// Function 2: Show Welcome Message
+function showWelcomeMessage() {
+  let welcome = document.getElementById("welcome-message");
+  welcome.textContent = "✨ Welcome to Gracey’s Oil Perfume – Luxury in Every Drop ✨";
 }
+showWelcomeMessage();
 
-// Function 2: Check discount
-function checkDiscount(amount) {
-  if (amount > 100) {
-    return "You get a 10% discount!";
-  } else {
-    return "No discount available.";
-  }
-}
 
-// ===============================
+// ====================
 // Part 3: Loops
-// ===============================
+// ====================
 
-let perfumes = ["Amber Rose", "Oud Musk", "Citrus Breeze", "Vanilla Woods"];
+// Example: Display top selling perfumes
+let bestSellers = ["Royal Oud", "Velvet Rose", "Golden Musk"];
+let bestSellersList = document.getElementById("best-sellers");
 
-// Loop 1: For loop
-for (let i = 0; i < perfumes.length; i++) {
-  console.log("Perfume: " + perfumes[i]);
-}
-
-// Loop 2: For-of loop
-for (let scent of perfumes) {
-  console.log("Available scent: " + scent);
-}
-
-// ===============================
-// Part 4: DOM Interactions
-// ===============================
-
-// DOM 1: Greeting button
-document.getElementById("greetBtn").addEventListener("click", function() {
-  document.getElementById("greeting").textContent = greetUser("Gracey");
-});
-
-// DOM 2: Discount button
-document.getElementById("discountBtn").addEventListener("click", function() {
-  document.getElementById("discountMsg").textContent = checkDiscount(120);
-});
-
-// DOM 3: Display perfume list
-let perfumeList = document.getElementById("perfumeList");
-perfumes.forEach(function(item) {
+for (let i = 0; i < bestSellers.length; i++) {
   let li = document.createElement("li");
-  li.textContent = item;
-  perfumeList.appendChild(li);
+  li.textContent = bestSellers[i];
+  bestSellersList.appendChild(li);
+}
+
+// Example: Countdown to a special sale
+for (let countdown = 5; countdown > 0; countdown--) {
+  console.log("Sale starts in: " + countdown + " days");
+}
+
+
+// ====================
+// Part 4: DOM Interactions
+// ====================
+
+// Change header color on hover
+let header = document.querySelector("header");
+header.addEventListener("mouseover", function () {
+  header.style.backgroundColor = "#333";
+});
+header.addEventListener("mouseout", function () {
+  header.style.backgroundColor = "black";
+});
+
+// Show discounted price when button is clicked
+document.getElementById("discount-btn").addEventListener("click", function () {
+  let discountedPrice = applyDiscount(price, 10);
+  document.getElementById("discount-result").textContent =
+    "🎉 Special Discount Price: $" + discountedPrice;
 });
