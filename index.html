@@ -7,17 +7,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to Gracey Oil Perfume</h1>
-  <p>Discover our premium oil perfumes.</p>
+  <header>
+    <h1>Gracey Oil Perfume</h1>
+    <p class="tagline">Luxury • Elegance • Confidence</p>
+  </header>
 
-  <!-- Part 4: DOM elements we will interact with -->
-  <button id="greetBtn">Click me for a greeting</button>
-  <p id="greeting"></p>
+  <main class="container">
+    <section class="intro">
+      <h2>Welcome to Gracey Oil Perfume</h2>
+      <p>Discover our premium oil perfumes crafted for timeless beauty and elegance.</p>
+    </section>
 
-  <button id="discountBtn">Check Discount</button>
-  <p id="discountMsg"></p>
+    <section class="actions">
+      <button id="greetBtn">✨ Click me for a greeting</button>
+      <p id="greeting"></p>
 
-  <ul id="perfumeList"></ul>
+      <button id="discountBtn">💎 Check Discount</button>
+      <p id="discountMsg"></p>
+    </section>
+
+    <section class="perfumes">
+      <h2>Our Collection</h2>
+      <ul id="perfumeList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gracey Oil Perfume | All Rights Reserved</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
