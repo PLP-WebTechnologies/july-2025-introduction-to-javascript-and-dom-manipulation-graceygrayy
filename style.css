@@ -17,20 +17,18 @@ body {
 header {
   text-align: center;
   padding: 40px 20px;
-  background: #244c2b; /* Darker Mughal Green */
-  border-bottom: 2px solid #F8E231;
+  background: #244c2b; /* Darker Mughal Green for contrast */
+  border-bottom: 2px solid #F8E231; /* Gold */
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: #F8E231;
-  text-shadow: 0 0 5px #F8E231, 0 0 10px #f9e86f;
-  animation: glow 2.5s ease-in-out infinite alternate;
+  color: #F8E231; /* Gold */
 }
 
 header p {
   font-style: italic;
-  color: #F5F5DC;
+  color: #F5F5DC; /* Cream */
 }
 
 /* Sections */
@@ -38,29 +36,17 @@ main section {
   margin: 40px auto;
   padding: 20px;
   max-width: 800px;
-  background-color: #345e3c;
+  background-color: #345e3c; /* Slightly lighter Mughal Green */
   border: 1px solid #F8E231;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(248, 226, 49, 0.3);
+  box-shadow: 0 0 15px rgba(248, 226, 49, 0.3); /* Gold glow */
 }
 
 main h2 {
-  color: #F8E231;
+  color: #F8E231; /* Gold */
   margin-bottom: 15px;
   border-bottom: 1px solid #F8E231;
   padding-bottom: 5px;
-  text-shadow: 0 0 3px #F8E231, 0 0 6px #ffe867;
-  animation: glow 3s ease-in-out infinite alternate;
-}
-
-/* Glow Animation */
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #F8E231, 0 0 10px #f9e86f;
-  }
-  to {
-    text-shadow: 0 0 15px #fff4b2, 0 0 25px #F8E231;
-  }
 }
 
 /* Lists */
@@ -77,8 +63,8 @@ main h2 {
 
 /* Button */
 button {
-  background-color: #F8E231;
-  color: #2E6237;
+  background-color: #F8E231; /* Gold */
+  color: #2E6237; /* Mughal Green text */
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
